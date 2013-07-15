@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Link:</b>
+  <%= @linkage.link %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @linkage.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_linkage_path(@linkage) %> |
+<%= link_to 'Back', linkages_path %>

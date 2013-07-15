@@ -1,0 +1,347 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateLinkages (20130715040335)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "linkages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "link" varchar(255), "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130715040335')[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/linkages" for 127.0.0.1 at 2013-07-14 21:05:05 -0700
+Processing by LinkagesController#index as HTML
+  [1m[36mLinkage Load (0.1ms)[0m  [1mSELECT "linkages".* FROM "linkages" [0m
+  Rendered linkages/index.html.erb within layouts/application (2.0ms)
+Compiled linkages.css  (4ms)  (pid 4086)
+Compiled scaffolds.css  (12ms)  (pid 4086)
+Compiled application.css  (23ms)  (pid 4086)
+Compiled jquery.js  (5ms)  (pid 4086)
+Compiled jquery_ujs.js  (0ms)  (pid 4086)
+Compiled linkages.js  (96ms)  (pid 4086)
+Compiled application.js  (143ms)  (pid 4086)
+Completed 200 OK in 234ms (Views: 214.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/linkages.css?body=1" for 127.0.0.1 at 2013-07-14 21:05:05 -0700
+Served asset /linkages.css - 200 OK (3ms)
+
+
+Started GET "/assets/linkages.js?body=1" for 127.0.0.1 at 2013-07-14 21:05:05 -0700
+Served asset /linkages.js - 200 OK (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-14 21:05:05 -0700
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-14 21:05:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-14 21:05:05 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/linkages/new" for 127.0.0.1 at 2013-07-14 21:05:10 -0700
+Processing by LinkagesController#new as HTML
+  Rendered linkages/_form.html.erb (11.5ms)
+  Rendered linkages/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 56ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-14 21:05:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-14 21:05:10 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-14 21:05:10 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started POST "/linkages" for 127.0.0.1 at 2013-07-14 21:05:30 -0700
+Processing by LinkagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PRM8QtlRwvx+CRtDDSrF2NEdz1JUIlGv2iSacJufe4I=", "linkage"=>{"link"=>"http://coletteisabella.com", "description"=>"Is amazing"}, "commit"=>"Create Linkage"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (6.1ms)[0m  [1mINSERT INTO "linkages" ("created_at", "description", "link", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 15 Jul 2013 04:05:30 UTC +00:00], ["description", "Is amazing"], ["link", "http://coletteisabella.com"], ["updated_at", Mon, 15 Jul 2013 04:05:30 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/linkages/1
+Completed 302 Found in 12ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/linkages/1" for 127.0.0.1 at 2013-07-14 21:05:30 -0700
+Processing by LinkagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLinkage Load (0.3ms)[0m  [1mSELECT "linkages".* FROM "linkages" WHERE "linkages"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered linkages/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/linkages.css?body=1" for 127.0.0.1 at 2013-07-14 21:05:30 -0700
+Served asset /linkages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-14 21:05:30 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-14 21:05:30 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-14 21:05:30 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkages.js?body=1" for 127.0.0.1 at 2013-07-14 21:05:30 -0700
+Served asset /linkages.js - 304 Not Modified (0ms)
+
+
+Started GET "/linkages" for 127.0.0.1 at 2013-07-14 21:05:47 -0700
+Processing by LinkagesController#index as HTML
+  [1m[35mLinkage Load (0.2ms)[0m  SELECT "linkages".* FROM "linkages" 
+  Rendered linkages/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/linkages.css?body=1" for 127.0.0.1 at 2013-07-14 21:05:47 -0700
+Served asset /linkages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-14 21:05:47 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-14 21:05:47 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkages.js?body=1" for 127.0.0.1 at 2013-07-14 21:05:47 -0700
+Served asset /linkages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-14 21:05:47 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/linkages" for 127.0.0.1 at 2013-07-14 21:07:34 -0700
+Processing by LinkagesController#index as HTML
+  [1m[36mLinkage Load (0.2ms)[0m  [1mSELECT "linkages".* FROM "linkages" [0m
+  Rendered linkages/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/linkages.css?body=1" for 127.0.0.1 at 2013-07-14 21:07:34 -0700
+Served asset /linkages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-14 21:07:34 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-14 21:07:34 -0700
+Served asset /application.css - 200 OK (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-14 21:07:34 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-14 21:07:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-14 21:07:34 -0700
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/assets/linkages.js?body=1" for 127.0.0.1 at 2013-07-14 21:07:34 -0700
+Served asset /linkages.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/linkages/1" for 127.0.0.1 at 2013-07-14 21:07:41 -0700
+Processing by LinkagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PRM8QtlRwvx+CRtDDSrF2NEdz1JUIlGv2iSacJufe4I=", "id"=>"1"}
+  [1m[35mLinkage Load (0.2ms)[0m  SELECT "linkages".* FROM "linkages" WHERE "linkages"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "linkages" WHERE "linkages"."id" = ?  [["id", 1]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/linkages
+Completed 302 Found in 7ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/linkages" for 127.0.0.1 at 2013-07-14 21:07:41 -0700
+Processing by LinkagesController#index as HTML
+  [1m[35mLinkage Load (0.1ms)[0m  SELECT "linkages".* FROM "linkages" 
+  Rendered linkages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/linkages.css?body=1" for 127.0.0.1 at 2013-07-14 21:07:42 -0700
+Served asset /linkages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-14 21:07:42 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-14 21:07:42 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkages.js?body=1" for 127.0.0.1 at 2013-07-14 21:07:42 -0700
+Served asset /linkages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-14 21:07:42 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/linkages" for 127.0.0.1 at 2013-07-14 21:08:18 -0700
+Processing by LinkagesController#index as HTML
+  [1m[36mLinkage Load (0.1ms)[0m  [1mSELECT "linkages".* FROM "linkages" [0m
+  Rendered linkages/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-14 21:08:19 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkages.css?body=1" for 127.0.0.1 at 2013-07-14 21:08:19 -0700
+Served asset /linkages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-14 21:08:19 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-14 21:08:19 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-14 21:08:19 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkages.js?body=1" for 127.0.0.1 at 2013-07-14 21:08:19 -0700
+Served asset /linkages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-14 21:08:19 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/linkages" for 127.0.0.1 at 2013-07-14 21:12:35 -0700
+Processing by LinkagesController#index as HTML
+  [1m[35mLinkage Load (0.2ms)[0m  SELECT "linkages".* FROM "linkages" 
+  Rendered linkages/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-14 21:12:35 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkages.css?body=1" for 127.0.0.1 at 2013-07-14 21:12:35 -0700
+Served asset /linkages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-14 21:12:35 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-14 21:12:35 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-14 21:12:35 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-14 21:12:35 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkages.js?body=1" for 127.0.0.1 at 2013-07-14 21:12:35 -0700
+Served asset /linkages.js - 304 Not Modified (0ms)
+
+
+Started GET "/linkages" for 127.0.0.1 at 2013-07-14 21:12:50 -0700
+Processing by LinkagesController#index as HTML
+  [1m[36mLinkage Load (0.1ms)[0m  [1mSELECT "linkages".* FROM "linkages" [0m
+  Rendered linkages/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-14 21:12:50 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkages.css?body=1" for 127.0.0.1 at 2013-07-14 21:12:50 -0700
+Served asset /linkages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-14 21:12:50 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-14 21:12:50 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-14 21:12:50 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkages.js?body=1" for 127.0.0.1 at 2013-07-14 21:12:50 -0700
+Served asset /linkages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-14 21:12:50 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/linkages/new" for 127.0.0.1 at 2013-07-14 21:13:09 -0700
+Processing by LinkagesController#new as HTML
+  Rendered linkages/_form.html.erb (2.0ms)
+  Rendered linkages/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-14 21:13:09 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-14 21:13:09 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-14 21:13:09 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkages.js?body=1" for 127.0.0.1 at 2013-07-14 21:13:09 -0700
+Served asset /linkages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-14 21:13:09 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkages.css?body=1" for 127.0.0.1 at 2013-07-14 21:13:09 -0700
+Served asset /linkages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-14 21:13:09 -0700
+Served asset /application.js - 304 Not Modified (0ms)
